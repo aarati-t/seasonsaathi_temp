@@ -1,6 +1,6 @@
 # SeasonSaathi v2: spec for AI-assisted (spec-driven) build
 Household climate-risk companion for drought-hit Marathwada
-Target: Google Cloud hackathon prototype | Builder: 1 person | Real working time: ~16 hrs
+Target: Google Cloud hackathon prototype |  
 **v2 change:** Gemini on **Vertex AI** and **ADK** are now the primary path. AI Studio API key and the plain orchestrator remain only as fallbacks.
 
 ---
