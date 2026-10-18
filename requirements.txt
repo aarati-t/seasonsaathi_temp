@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+google-genai
+google-adk
+pydantic
+psycopg[binary]
+google-cloud-bigquery
+google-cloud-storage
+google-cloud-pubsub
+numpy
+pandas
+scikit-learn
+earthengine-api
+python-dotenv
+python-multipart
+pyyaml
+pytest

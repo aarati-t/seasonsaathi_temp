@@ -1,0 +1,17 @@
+# mandi: Agmarknet Market Wise Price & Arrival exports (district-level daily price, Rs/quintal)
+# reference: MSP from msp_2026.csv (PIB); pct_vs_reference = (modal - MSP) / MSP * 100
+commodity,district,market,date,modal_price,reference_price,reference_type,reference_season,pct_vs_reference,source,source_url,is_synthetic
+gram,Dharashiv,,2026-10-13,7454.17,5958.0,MSP,RMS 2027-28,25.1,Agmarknet,https://agmarknet.gov.in/home,False
+gram,Dharashiv,,2026-10-14,7162.71,5958.0,MSP,RMS 2027-28,20.2,Agmarknet,https://agmarknet.gov.in/home,False
+gram,Dharashiv,,2026-10-15,7414.29,5958.0,MSP,RMS 2027-28,24.4,Agmarknet,https://agmarknet.gov.in/home,False
+jowar,Dharashiv,,2026-10-13,5000.0,4073.0,MSP,KMS 2026-27,22.8,Agmarknet,https://agmarknet.gov.in/home,False
+jowar,Dharashiv,,2026-10-15,5000.0,4073.0,MSP,KMS 2026-27,22.8,Agmarknet,https://agmarknet.gov.in/home,False
+soybean,Dharashiv,,2026-10-13,6409.58,5708.0,MSP,KMS 2026-27,12.3,Agmarknet,https://agmarknet.gov.in/home,False
+soybean,Dharashiv,,2026-10-14,6966.99,5708.0,MSP,KMS 2026-27,22.1,Agmarknet,https://agmarknet.gov.in/home,False
+soybean,Dharashiv,,2026-10-15,7023.17,5708.0,MSP,KMS 2026-27,23.0,Agmarknet,https://agmarknet.gov.in/home,False
+tur,Dharashiv,,2026-10-13,10253.75,8450.0,MSP,KMS 2026-27,21.3,Agmarknet,https://agmarknet.gov.in/home,False
+tur,Dharashiv,,2026-10-14,9700.0,8450.0,MSP,KMS 2026-27,14.8,Agmarknet,https://agmarknet.gov.in/home,False
+tur,Dharashiv,,2026-10-15,10162.96,8450.0,MSP,KMS 2026-27,20.3,Agmarknet,https://agmarknet.gov.in/home,False
+wheat,Dharashiv,,2026-10-13,3022.2,2610.0,MSP,RMS 2027-28,15.8,Agmarknet,https://agmarknet.gov.in/home,False
+wheat,Dharashiv,,2026-10-14,2725.0,2610.0,MSP,RMS 2027-28,4.4,Agmarknet,https://agmarknet.gov.in/home,False
+wheat,Dharashiv,,2026-10-15,2620.33,2610.0,MSP,RMS 2027-28,0.4,Agmarknet,https://agmarknet.gov.in/home,False

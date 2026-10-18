@@ -1,0 +1,55 @@
+# Thresholds (SPEC F2, F7). These are assumptions, tuned for the demo; change here, not in code.
+
+rain:
+  deficit_pct_alert: 25          # F2: cumulative deficit above this is stress
+  dry_spell_days_alert: 21       # F2: longest dry spell above this is stress
+  dry_day_mm: 2.5                # a day with less rain than this counts as dry (IMD rainy-day definition)
+  min_normal_mm_for_deficit: 50  # ignore deficit % until this much normal rain has accumulated
+
+ndvi:
+  pct_of_normal_alert: 80        # F2: NDVI below this % of normal is stress
+
+calibration:
+  high_min_hit_rate: 0.70        # F7: HIGH calls right less often than this -> downgrade to MED
+  min_n: 5                       # fewer past HIGH calls than this -> no downgrade, "insufficient history"
+  rain_buckets: [15, 30]         # F7: rain deficit % buckets 0-15 / 15-30 / >30
+
+peers:
+  k: 3                           # similar households returned by find_similar_households
+
+verifier:
+  rel_tolerance: 0.01            # numbers in the output may differ from the fact by 1% (P4 rule)
+  abs_tolerance: 0.5             # ... or by 0.5 (rounding, e.g. 24.4% written as 24%)
+
+profile:
+  min_completeness_pct: 60       # F1: below this, profile.flags has "incomplete"; F3/F4 cap confidence at LOW
+  completeness_weights:          # F1: completeness_pct = weighted share of known fields (sums to 100)
+    irrigation: 20
+    water_hours_per_week: 15
+    fodder_weeks_left: 15
+    cash_buffer_band: 15
+    crops_last_season: 10
+    cattle_count: 10
+    tenure: 10
+    acres: 5
+
+f4:
+  fodder_horizon_weeks: 12       # assumption: weeks until next fodder (kharif/rabi residue) is expected
+  intake_kg_per_day_large: 18    # sourced: Maharashtra fodder camp ration per large animal (2019, livestock_prices.csv)
+  cash_band_limit_rs:            # assumption: rough cash a household in each band can find in a season (what_would_change only)
+    low: 10000
+    med: 30000
+    high: 60000
+
+alerts:
+  dedupe_days: 7                 # F2: no new alert for the same plot + stress level within this many days
+
+interview:
+  max_questions: 3               # F1: follow-up questions per interview
+
+water_budget:                    # P7 (SPEC F3 step 1): coverage = water available / crop water need x 100
+  fit_min_pct: 100               # assumption: coverage at or above this -> water_fit fit
+  tight_min_pct: 70              # assumption: coverage from this up to fit_min_pct -> tight; below -> short
+  pump_m3_per_hour: 10           # assumption (labelled SYNTHETIC in the fact): pump flow when the farmer gives hours only
+  rabi_irrigation_weeks: 16      # assumption: weeks of irrigation in a rabi season (about 110 days)
+  smap_rootzone_depth_m: 1.0     # SMAP sm_rootzone is the 0-100 cm average; root depth used is capped at this

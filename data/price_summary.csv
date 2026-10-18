@@ -1,0 +1,8 @@
+# latest_modal_price = median across markets on latest_date; empty = no mandi data (MSP only)
+commodity,district,latest_date,latest_modal_price,reference_price,reference_type,reference_season,reference_source_url,pct_vs_reference,n_markets,note,source,source_url,is_synthetic
+soybean,Dharashiv,2026-10-15,7023.17,5708.0,MSP,KMS 2026-27,https://pib.gov.in/PressReleasePage.aspx?PRID=2260617,23.0,,district-level price; markets not listed in export,Agmarknet,https://agmarknet.gov.in/home,False
+tur,Dharashiv,2026-10-15,10162.96,8450.0,MSP,KMS 2026-27,https://pib.gov.in/PressReleasePage.aspx?PRID=2260617,20.3,,district-level price; markets not listed in export,Agmarknet,https://agmarknet.gov.in/home,False
+gram,Dharashiv,2026-10-15,7414.29,5958.0,MSP,RMS 2027-28,https://pib.gov.in/newsite/erelcontent.aspx?relid=295517,24.4,,district-level price; markets not listed in export,Agmarknet,https://agmarknet.gov.in/home,False
+jowar,Dharashiv,2026-10-15,5000.0,4073.0,MSP,KMS 2026-27,https://pib.gov.in/PressReleasePage.aspx?PRID=2260617,22.8,,district-level price; markets not listed in export,Agmarknet,https://agmarknet.gov.in/home,False
+safflower,Dharashiv,,,7215.0,MSP,RMS 2027-28,https://pib.gov.in/newsite/erelcontent.aspx?relid=295517,,,no mandi data (off-season); MSP only,Agmarknet,https://agmarknet.gov.in/home,False
+wheat,Dharashiv,2026-10-15,2620.33,2610.0,MSP,RMS 2027-28,https://pib.gov.in/newsite/erelcontent.aspx?relid=295517,0.4,,district-level price; markets not listed in export,Agmarknet,https://agmarknet.gov.in/home,False

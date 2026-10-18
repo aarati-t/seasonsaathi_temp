@@ -1,0 +1,27 @@
+# P5b impact simulator (scripts/run_impact.py). Every value here is a labelled scenario assumption or a candidate
+# reference, never an observation. KPIs report which of these they used.
+
+population: demo        # demo = synthetic households only (is_synthetic = true); "all" is a local-only CLI option
+
+k1:
+  baseline_option: SELL_NOW        # scenario baseline: sell all large animals now at the drought price (F4 facts)
+  scenarios: [low, mid, high]      # low/high ends of every F4 price and cost range; mid = central value
+
+k2:
+  # No planned rabi crop is recorded in the household profile, so every household gets this baseline option as a
+  # labelled assumption (counted as "assumed baseline" in the KPI). It is not survey data.
+  baseline_option: Chana only
+  baseline_basis: "assumption: gram (chana) treated as each household's default rabi plan; no planned_rabi_crop field"
+
+k3:
+  reference_date: "2026-09-29"     # candidate reference (drought declaration) date supplied for the demo
+  verified: false                  # no stored source: shown as an assumption, never as official validation
+  source_url: null
+  geographic_scope: unknown
+
+k5:
+  # Illustrative mapping of confidence labels to numbers; NOT empirically established probabilities.
+  mapping: {HIGH: 0.85, MED: 0.60, LOW: 0.35}
+
+k7:
+  target_days: 3                   # TARGET only: loss -> evidence file; not measured (F6 is not built)

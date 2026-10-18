@@ -1,0 +1,26 @@
+# Local terms -> canonical value, applied BEFORE Gemini (SPEC F1 step 3).
+# Matching is whole-word and case-insensitive. Devanagari spellings of the same words are listed too.
+# Terms not listed here are normalised by Gemini and logged (f1 trace: "gemini_normalised_terms").
+# category: which profile field the canonical value belongs to (none = context only, no field).
+
+crops:            # -> crops_last_season
+  sorghum:   [jowar, jwari, ज्वारी, ज्वार]
+  pigeon pea: [tur, toor, तूर, तुर]
+  gram:      [harbhara, हरभरा, chana, चना]
+  safflower: [kardai, करडई]
+
+soil:             # -> soil_type_farmer (P7; recorded only when the farmer states it)
+  black cotton soil (vertisol): [kali mitti, काळी माती, काली मिट्टी]
+
+irrigation:       # -> irrigation
+  well:      [vihir, विहीर, विहिर]
+  borewell:  [borewell, bore well, बोअरवेल, बोरवेल]
+
+animals:          # -> cattle_count (cow, buffalo) / goats_count (goat)
+  cow:       [gai, गाय, गायी]
+  buffalo:   [mhais, म्हैस, म्हशी]
+  goat:      [sheli, शेळी, शेळ्या]
+
+tenure:           # -> tenure
+  tenant:    [bhadyane, khand, भाड्याने, खंड, खंडाने]
+  sharecrop: [batai, बटाई, बटाईने]

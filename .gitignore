@@ -1,0 +1,16 @@
+.env
+*.json.key
+*service-account*.json
+application_default_credentials.json
+__pycache__/
+.pytest_cache/
+.venv/
+storage/*
+!storage/.gitkeep
+data/raw/
+.cache/
+logs/
+
+# personal data from the field survey (farmer names): never public
+data/Survey.csv
+/*.pdf

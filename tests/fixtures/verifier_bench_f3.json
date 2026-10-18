@@ -1,0 +1,483 @@
+{
+ "source_request_id": "20261018T111252-2a6f0bbb",
+ "feature": "f3",
+ "hh_id": "HH-DEMO-OK",
+ "note": "Frozen real F3 output (ADK, Vertex, verifier PASS) for the P5b K4 benchmark. Cases are built from it by construction in features/verifier_bench.py. recommended is the ASSESSOR's pick (Chana + safflower) as logged in the run notes; code later re-picked Jowar + fodder, and the verifier checks the assessor output, so the fixture keeps the assessor's.",
+ "assessment": {
+  "options": [
+   {
+    "name": "Chana only",
+    "signal": "ACT",
+    "drivers": [
+     {
+      "text": "Similar households grew Chana only in 4 seasons with 2 good and 2 partial outcomes.",
+      "fact_id": "F-peer-chana-only"
+     },
+     {
+      "text": "Calibration history for Chana only shows 0 percent right for past high calls.",
+      "fact_id": "F-cal-gt30-well-gram"
+     },
+     {
+      "text": "Season rain is 41.9 percent below normal.",
+      "fact_id": "F-rain-deficit"
+     }
+    ],
+    "water_fit": "tight",
+    "confidence": "MED",
+    "cash_at_risk": "med",
+    "failure_risk": 20
+   },
+   {
+    "name": "Chana + safflower",
+    "signal": "ACT",
+    "drivers": [
+     {
+      "text": "Similar households grew Chana + safflower in 2 seasons with 2 good outcomes.",
+      "fact_id": "F-peer-chana-safflower"
+     },
+     {
+      "text": "Calibration history for Chana + safflower shows 100 percent right for past high calls.",
+      "fact_id": "F-cal-gt30-well-gram-safflower"
+     },
+     {
+      "text": "Water available is 10 hours per week.",
+      "fact_id": "F-hh-water_hours_per_week"
+     }
+    ],
+    "water_fit": "fit",
+    "confidence": "HIGH",
+    "cash_at_risk": "med",
+    "failure_risk": 15
+   },
+   {
+    "name": "Jowar + fodder",
+    "signal": "ACT",
+    "drivers": [
+     {
+      "text": "Similar households grew Jowar + fodder in 3 seasons with 3 good outcomes.",
+      "fact_id": "F-peer-jowar-fodder"
+     },
+     {
+      "text": "Calibration history for Jowar + fodder shows 67 percent right for past medium calls.",
+      "fact_id": "F-cal-gt30-well-sorghum-fodder"
+     },
+     {
+      "text": "Fodder left is 6 weeks for 2 cattle and 0 goats.",
+      "fact_id": "F-hh-fodder_weeks_left"
+     }
+    ],
+    "water_fit": "fit",
+    "confidence": "HIGH",
+    "cash_at_risk": "med",
+    "failure_risk": 10
+   }
+  ],
+  "recommended": "Chana + safflower",
+  "explanation_mr": "पावसाची तूट ४१.९ टक्के आहे. उपलब्ध पाणी १० तास प्रति आठवडा आहे. त्यामुळे हरभरा आणि करडई घेणे योग्य ठरेल.",
+  "explanation_hi": "बारिश की कमी ४१.९ प्रतिशत है। उपलब्ध पानी १० घंटे प्रति सप्ताह है। इसलिए चना और कुसुम उगाना उचित रहेगा।",
+  "why_recommended": [
+   {
+    "text": "Similar households grew Chana + safflower in 2 seasons with 2 good outcomes.",
+    "fact_id": "F-peer-chana-safflower"
+   },
+   {
+    "text": "Water available is 10 hours per week.",
+    "fact_id": "F-hh-water_hours_per_week"
+   }
+  ],
+  "why_not_others": [
+   {
+    "text": "Similar households grew Chana only in 4 seasons with 2 partial outcomes.",
+    "option": "Chana only",
+    "fact_id": "F-peer-chana-only"
+   },
+   {
+    "text": "Fodder left is 6 weeks for 2 cattle and 0 goats.",
+    "option": "Jowar + fodder",
+    "fact_id": "F-hh-fodder_weeks_left"
+   }
+  ]
+ },
+ "facts": [
+  {
+   "text": "Irrigation source: well",
+   "unit": null,
+   "as_of": null,
+   "value": "well",
+   "source": "household profile (SYNTHETIC)",
+   "fact_id": "F-hh-irrigation",
+   "source_url": null,
+   "is_synthetic": true
+  },
+  {
+   "text": "Water available: 10 hours per week",
+   "unit": "hours per week",
+   "as_of": null,
+   "value": 10,
+   "source": "household profile (SYNTHETIC)",
+   "fact_id": "F-hh-water_hours_per_week",
+   "source_url": null,
+   "is_synthetic": true
+  },
+  {
+   "text": "Cash buffer: med",
+   "unit": null,
+   "as_of": null,
+   "value": "med",
+   "source": "household profile (SYNTHETIC)",
+   "fact_id": "F-hh-cash_buffer_band",
+   "source_url": null,
+   "is_synthetic": true
+  },
+  {
+   "text": "Land: 3 acres",
+   "unit": "acres",
+   "as_of": null,
+   "value": 3,
+   "source": "household profile (SYNTHETIC)",
+   "fact_id": "F-hh-acres",
+   "source_url": null,
+   "is_synthetic": true
+  },
+  {
+   "text": "Tenure: owner",
+   "unit": null,
+   "as_of": null,
+   "value": "owner",
+   "source": "household profile (SYNTHETIC)",
+   "fact_id": "F-hh-tenure",
+   "source_url": null,
+   "is_synthetic": true
+  },
+  {
+   "text": "Kharif crops last season: soybean + tur",
+   "unit": null,
+   "as_of": null,
+   "value": "soybean + tur",
+   "source": "household profile (SYNTHETIC)",
+   "fact_id": "F-hh-crops_last_season",
+   "source_url": null,
+   "is_synthetic": true
+  },
+  {
+   "text": "Cattle: 2 animals",
+   "unit": "animals",
+   "as_of": null,
+   "value": 2,
+   "source": "household profile (SYNTHETIC)",
+   "fact_id": "F-hh-cattle_count",
+   "source_url": null,
+   "is_synthetic": true
+  },
+  {
+   "text": "Goats: 0 animals",
+   "unit": "animals",
+   "as_of": null,
+   "value": 0,
+   "source": "household profile (SYNTHETIC)",
+   "fact_id": "F-hh-goats_count",
+   "source_url": null,
+   "is_synthetic": true
+  },
+  {
+   "text": "Fodder left: 6 weeks for 2 cattle and 0 goats",
+   "unit": "weeks",
+   "as_of": null,
+   "value": 6,
+   "source": "household profile (SYNTHETIC)",
+   "fact_id": "F-hh-fodder_weeks_left",
+   "source_url": null,
+   "is_synthetic": true
+  },
+  {
+   "text": "Off-farm income: dairy",
+   "unit": null,
+   "as_of": null,
+   "value": "dairy",
+   "source": "household profile (SYNTHETIC)",
+   "fact_id": "F-hh-off_farm_income",
+   "source_url": null,
+   "is_synthetic": true
+  },
+  {
+   "text": "Loan due month: unknown",
+   "unit": "month number",
+   "as_of": null,
+   "value": null,
+   "source": "household profile (SYNTHETIC)",
+   "fact_id": "F-hh-loan_due_month",
+   "source_url": null,
+   "is_synthetic": true
+  },
+  {
+   "text": "Primary cultivator: both",
+   "unit": null,
+   "as_of": null,
+   "value": "both",
+   "source": "household profile (SYNTHETIC)",
+   "fact_id": "F-hh-primary_cultivator_gender",
+   "source_url": null,
+   "is_synthetic": true
+  },
+  {
+   "text": "Profile completeness: 100% (weighted)",
+   "unit": "% complete (weighted)",
+   "as_of": null,
+   "flags": [],
+   "value": 100,
+   "source": "household profile (SYNTHETIC)",
+   "fact_id": "F-hh-completeness",
+   "source_url": null,
+   "is_synthetic": true
+  },
+  {
+   "text": "Village: Chincholi, Bhoom taluka, Dharashiv district",
+   "unit": null,
+   "as_of": null,
+   "value": "Chincholi",
+   "source": "data/villages.csv (hand-entered)",
+   "fact_id": "F-hh-village",
+   "source_url": null,
+   "is_synthetic": false
+  },
+  {
+   "text": "Season rain is 41.9% below normal (cumulative since 2026-06-01, to 2026-09-30)",
+   "unit": "% below normal",
+   "as_of": "2026-09-30",
+   "value": 41.9,
+   "source": "CHIRPS daily (UCSB-CHG/CHIRPS/DAILY) via Earth Engine",
+   "fact_id": "F-rain-deficit",
+   "source_url": "https://developers.google.com/earth-engine/datasets/catalog/UCSB-CHG_CHIRPS_DAILY",
+   "data_source": "CHIRPS",
+   "is_synthetic": false
+  },
+  {
+   "text": "Rain 2026-06-01 to 2026-09-30: 334.8 mm against a normal of 576.5 mm",
+   "unit": "mm",
+   "as_of": "2026-09-30",
+   "value": 334.8,
+   "source": "CHIRPS daily (UCSB-CHG/CHIRPS/DAILY) via Earth Engine",
+   "fact_id": "F-rain-total",
+   "source_url": "https://developers.google.com/earth-engine/datasets/catalog/UCSB-CHG_CHIRPS_DAILY",
+   "data_source": "CHIRPS",
+   "is_synthetic": false
+  },
+  {
+   "text": "Longest dry spell since 2026-06-01: 24 days (days under 2.5 mm)",
+   "unit": "days",
+   "as_of": "2026-09-30",
+   "value": 24,
+   "source": "CHIRPS daily (UCSB-CHG/CHIRPS/DAILY) via Earth Engine",
+   "fact_id": "F-rain-dryspell",
+   "source_url": "https://developers.google.com/earth-engine/datasets/catalog/UCSB-CHG_CHIRPS_DAILY",
+   "data_source": "CHIRPS",
+   "is_synthetic": false
+  },
+  {
+   "text": "Dry days in a row up to 2026-09-30: 5",
+   "unit": "days",
+   "as_of": "2026-09-30",
+   "value": 5,
+   "source": "CHIRPS daily (UCSB-CHG/CHIRPS/DAILY) via Earth Engine",
+   "fact_id": "F-rain-current-dry",
+   "source_url": "https://developers.google.com/earth-engine/datasets/catalog/UCSB-CHG_CHIRPS_DAILY",
+   "data_source": "CHIRPS",
+   "is_synthetic": false
+  },
+  {
+   "text": "3 most similar households: SYN-010 (similarity 0.96), SYN-011 (similarity 0.96), SYN-001 (similarity 0.96)",
+   "unit": null,
+   "as_of": null,
+   "value": [
+    "SYN-010",
+    "SYN-011",
+    "SYN-001"
+   ],
+   "source": "embeddings (EMBED_MODEL) + outcomes table",
+   "fact_id": "F-peer-list",
+   "source_url": null,
+   "is_synthetic": true
+  },
+  {
+   "text": "Similar household SYN-010, rabi-2025-26: Chana + safflower -> good",
+   "unit": null,
+   "as_of": null,
+   "value": "good",
+   "source": "outcomes table",
+   "fact_id": "F-peer-outcome-1",
+   "source_url": null,
+   "is_synthetic": true
+  },
+  {
+   "text": "Similar household SYN-011, rabi-2025-26: Jowar + fodder -> good; 1 animal(s) sold in distress",
+   "unit": null,
+   "as_of": null,
+   "value": "good",
+   "source": "outcomes table",
+   "fact_id": "F-peer-outcome-2",
+   "source_url": null,
+   "is_synthetic": true
+  },
+  {
+   "text": "Similar household SYN-001, rabi-2025-26: Jowar + fodder -> good",
+   "unit": null,
+   "as_of": null,
+   "value": "good",
+   "source": "outcomes table",
+   "fact_id": "F-peer-outcome-3",
+   "source_url": null,
+   "is_synthetic": true
+  },
+  {
+   "text": "0 of 3 similar households had a loss in rabi-2025-26",
+   "unit": "losses of 3",
+   "as_of": null,
+   "value": 0,
+   "source": "outcomes table",
+   "fact_id": "F-peer-lastseason",
+   "source_url": null,
+   "is_synthetic": true
+  },
+  {
+   "text": "Similar households grew Chana + safflower in 2 seasons: 2 good, 0 partial, 0 loss",
+   "unit": "good of 2 seasons",
+   "as_of": null,
+   "value": 2,
+   "source": "embeddings (EMBED_MODEL) + outcomes table",
+   "fact_id": "F-peer-chana-safflower",
+   "source_url": null,
+   "is_synthetic": true
+  },
+  {
+   "text": "Similar households grew Chana only in 4 seasons: 2 good, 2 partial, 0 loss",
+   "unit": "good of 4 seasons",
+   "as_of": null,
+   "value": 2,
+   "source": "embeddings (EMBED_MODEL) + outcomes table",
+   "fact_id": "F-peer-chana-only",
+   "source_url": null,
+   "is_synthetic": true
+  },
+  {
+   "text": "Similar households grew Jowar + fodder in 3 seasons: 3 good, 0 partial, 0 loss",
+   "unit": "good of 3 seasons",
+   "as_of": null,
+   "value": 3,
+   "source": "embeddings (EMBED_MODEL) + outcomes table",
+   "fact_id": "F-peer-jowar-fodder",
+   "source_url": null,
+   "is_synthetic": true
+  },
+  {
+   "name": "calibration",
+   "text": "Calibration for >30|well|gram: HIGH 0% right (n=6, 6 real); MED 100% right (n=1, 0 real); LOW no past calls",
+   "unit": "% HIGH calls right",
+   "as_of": null,
+   "value": 0,
+   "levels": {
+    "LOW": {
+     "n": 0,
+     "n_real": 0,
+     "hit_rate": null,
+     "n_synthetic": 0
+    },
+    "MED": {
+     "n": 1,
+     "n_real": 0,
+     "hit_rate": 1.0,
+     "n_synthetic": 1
+    },
+    "HIGH": {
+     "n": 6,
+     "n_real": 6,
+     "hit_rate": 0.0,
+     "n_synthetic": 0
+    }
+   },
+   "source": "calibration_v (outcomes table)",
+   "context": ">30|well|gram",
+   "fact_id": "F-cal-gt30-well-gram",
+   "source_url": null,
+   "is_synthetic": true
+  },
+  {
+   "name": "calibration",
+   "text": "Calibration for >30|well|gram+safflower: HIGH 100% right (n=1, 0 real); MED no past calls; LOW 0% right (n=1, 0 real)",
+   "unit": "% HIGH calls right",
+   "as_of": null,
+   "value": 100,
+   "levels": {
+    "LOW": {
+     "n": 1,
+     "n_real": 0,
+     "hit_rate": 0.0,
+     "n_synthetic": 1
+    },
+    "MED": {
+     "n": 0,
+     "n_real": 0,
+     "hit_rate": null,
+     "n_synthetic": 0
+    },
+    "HIGH": {
+     "n": 1,
+     "n_real": 0,
+     "hit_rate": 1.0,
+     "n_synthetic": 1
+    }
+   },
+   "source": "calibration_v (outcomes table)",
+   "context": ">30|well|gram+safflower",
+   "fact_id": "F-cal-gt30-well-gram-safflower",
+   "source_url": null,
+   "is_synthetic": true
+  },
+  {
+   "name": "calibration",
+   "text": "Calibration for >30|well|sorghum+fodder: HIGH no past calls; MED 67% right (n=3, 0 real); LOW no past calls",
+   "unit": "% HIGH calls right",
+   "as_of": null,
+   "value": null,
+   "levels": {
+    "LOW": {
+     "n": 0,
+     "n_real": 0,
+     "hit_rate": null,
+     "n_synthetic": 0
+    },
+    "MED": {
+     "n": 3,
+     "n_real": 0,
+     "hit_rate": 0.67,
+     "n_synthetic": 3
+    },
+    "HIGH": {
+     "n": 0,
+     "n_real": 0,
+     "hit_rate": null,
+     "n_synthetic": 0
+    }
+   },
+   "source": "calibration_v (outcomes table)",
+   "context": ">30|well|sorghum+fodder",
+   "fact_id": "F-cal-gt30-well-sorghum-fodder",
+   "source_url": null,
+   "is_synthetic": true
+  },
+  {
+   "name": "what would change",
+   "text": "If past HIGH calls in >30|well|gram were right 70% of the time or more (now 0%, n=6), Chana only would keep HIGH confidence",
+   "unit": null,
+   "as_of": null,
+   "range": [
+    0,
+    70
+   ],
+   "value": 70,
+   "source": "computed in code",
+   "fact_id": "F-f3-wwc",
+   "source_url": null,
+   "is_synthetic": false
+  }
+ ]
+}

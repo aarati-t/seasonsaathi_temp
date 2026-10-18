@@ -1,0 +1,20 @@
+# Soil water per texture class (SPEC section 10.1 step 4b, P7). Values copied unchanged from FAO-56
+# (Allen et al. 1998) Table 19 "Typical soil water characteristics for different soil types".
+# theta = volumetric water content (m3/m3): FC = field capacity, WP = wilting point.
+# Texture classes not in Table 19 (e.g. clay loam, sandy clay) are deliberately absent: the water budget then
+# reports "not available" instead of borrowing another class.
+source: FAO-56 Table 19
+source_url: https://www.fao.org/4/x0490e/x0490e0c.htm
+
+texture:
+  clay:            {theta_fc: [0.32, 0.40], theta_wp: [0.20, 0.24]}
+  silty clay:      {theta_fc: [0.30, 0.42], theta_wp: [0.17, 0.29]}   # FAO page prints "0-30"; read as 0.30
+  silty clay loam: {theta_fc: [0.30, 0.37], theta_wp: [0.17, 0.24]}   # listed as "Silt clay loam"
+  loam:            {theta_fc: [0.20, 0.30], theta_wp: [0.07, 0.17]}
+  sandy loam:      {theta_fc: [0.18, 0.28], theta_wp: [0.06, 0.16]}
+
+# Soil type in the farmer's words (households.soil_type_farmer, from config/terms.yaml) -> texture class above.
+# Used only when the plot has no OpenLandMap soil row (e.g. households saved from F1 have no plot). Vertisols are
+# clay-rich (>= 30% clay); mapping them to FAO-56 "clay" is an approximation, so the fact is labelled as such.
+farmer_soil:
+  black cotton soil (vertisol): clay

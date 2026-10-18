@@ -1,0 +1,24 @@
+# Agmarknet commodity names -> our keys (scripts/prep_prices.py).
+# Matching ignores case and spaces. Names not listed here are logged and dropped, never guessed.
+# msp_key: row in data/raw/msp_2026.csv used as the reference price.
+# missing_note: written to price_summary when there is no mandi data for this commodity.
+
+soybean:
+  agmarknet_names: ["Soyabean", "Soybean"]
+  msp_key: soybean
+tur:
+  agmarknet_names: ["Arhar (Tur/Red Gram)(Whole)", "Red gram/Arhar/Tur(whole)"]
+  msp_key: tur
+gram:
+  agmarknet_names: ["Bengal Gram(Gram)(Whole)"]
+  msp_key: gram
+jowar:
+  agmarknet_names: ["Jowar(Sorghum)"]
+  msp_key: jowar_maldandi
+safflower:
+  agmarknet_names: ["Safflower"]
+  msp_key: safflower
+  missing_note: "no mandi data (off-season); MSP only"
+wheat:
+  agmarknet_names: ["Wheat"]
+  msp_key: wheat

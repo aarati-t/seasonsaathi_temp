@@ -1,0 +1,26 @@
+# Files NOT uploaded to Cloud Build by `gcloud run deploy --source .`
+.env
+.env.*
+!.env.example
+.venv/
+.git/
+__pycache__/
+.pytest_cache/
+.cache/
+logs/
+backups/
+storage/
+data/raw/
+tests/
+*.wav
+*.log
+# Dev-only: scripts run on the laptop, docs are for humans (prompts/*.md stay: the agents need them)
+scripts/
+/SPEC.md
+/CLAUDE.md
+/DEPLOY.md
+/pytest.ini
+/deploy.sh
+/.env.example
+/PROGRESS.md
+/DEMO.md

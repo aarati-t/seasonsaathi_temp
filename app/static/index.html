@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SeasonSaathi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { primary: "#1B5E20", accent: "#0277BD", soil: "#6D4C41", bg: "#FAFAF5",
+                act: "#2E7D32", wait: "#F9A825", avoid: "#C62828" },
+      fontFamily: { sans: ["Noto Sans", "Noto Sans Devanagari", "system-ui", "sans-serif"] } } } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.6/dist/chart.umd.min.js" defer></script>
+  <style>
+    html { font-size: 16px; }
+    body { background: #FAFAF5; color: #1f2421; overflow-x: hidden; }
+    :focus-visible { outline: 3px solid #0277BD; outline-offset: 2px; border-radius: 6px; }
+    .tap { min-height: 48px; min-width: 48px; }
+    .card { background: #fff; border-radius: 16px; border: 1px solid #e7e5dc; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+    .fact-flash { animation: flash 1.6s ease-out; }
+    @keyframes flash { 0% { background: #fff3c4; } 100% { background: transparent; } }
+    .signal-word { font-size: 28px; line-height: 1.1; font-weight: 700; }
+    .chip { display: inline-flex; align-items: center; gap: 4px; border-radius: 999px; padding: 2px 10px; font-size: 13px; font-weight: 600; white-space: nowrap; }
+    .fact-chip { display: inline-block; max-width: 100%; word-break: break-all; text-align: left; font-family: ui-monospace, monospace; font-size: 12px; background: #e3f2fd; color: #01579B; border-radius: 6px; padding: 1px 6px; }
+    .scroll-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    details > summary { cursor: pointer; list-style: none; }
+    details > summary::-webkit-details-marker { display: none; }
+    .skeleton { background: linear-gradient(90deg, #eee 25%, #f5f5f0 50%, #eee 75%); background-size: 200% 100%; animation: sk 1.4s infinite; border-radius: 12px; }
+    @keyframes sk { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+    .break-anywhere { overflow-wrap: anywhere; }
+  </style>
+</head>
+<body class="font-sans min-h-screen flex flex-col">
+  <div id="demo-bar" hidden></div>
+  <header class="bg-primary text-white">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between gap-2 flex-wrap">
+      <a href="#/households" class="flex items-center gap-2 tap" aria-label="SeasonSaathi home">
+        <span aria-hidden="true" class="text-2xl">🌾</span>
+        <span><span id="app-name" class="font-bold text-lg block leading-tight">SeasonSaathi</span>
+          <span id="tagline" class="text-xs opacity-90 block"></span></span>
+      </a>
+      <div role="group" aria-label="Language" class="flex rounded-full bg-white/10 p-1" id="lang-toggle"></div>
+    </div>
+    <nav aria-label="Main" class="max-w-5xl mx-auto px-2 scroll-x">
+      <ul id="nav" class="flex gap-1 text-sm whitespace-nowrap"></ul>
+    </nav>
+  </header>
+  <main id="main" class="flex-1 w-full max-w-5xl mx-auto px-4 py-4" tabindex="-1"></main>
+  <footer id="footer" class="text-xs text-gray-700 border-t border-gray-200 bg-white">
+    <div class="max-w-5xl mx-auto px-4 py-3" id="footer-inner">…</div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

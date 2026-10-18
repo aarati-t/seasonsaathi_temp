@@ -1,0 +1,1069 @@
+{
+  "villages": [
+    {
+      "name": "village_id",
+      "type": "INT64",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "name",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "taluka",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "district",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "lat",
+      "type": "FLOAT64",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "lon",
+      "type": "FLOAT64",
+      "mode": "REQUIRED"
+    }
+  ],
+  "households": [
+    {
+      "name": "hh_id",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "village_id",
+      "type": "INT64",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "tenure",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "acres",
+      "type": "FLOAT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "irrigation",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "water_hours_per_week",
+      "type": "FLOAT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "crops_last_season",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "cattle_count",
+      "type": "INT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "goats_count",
+      "type": "INT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "fodder_weeks_left",
+      "type": "FLOAT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "off_farm_income",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "loan_due_month",
+      "type": "INT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "cash_buffer_band",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "primary_cultivator_gender",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "consent",
+      "type": "BOOL",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "profile_text_norm",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "profile_embedding",
+      "type": "FLOAT64",
+      "mode": "REPEATED"
+    },
+    {
+      "name": "embed_model",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "is_synthetic",
+      "type": "BOOL",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "created_at",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "soil_type_farmer",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    }
+  ],
+  "plots": [
+    {
+      "name": "plot_id",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "hh_id",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "lat",
+      "type": "FLOAT64",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "lon",
+      "type": "FLOAT64",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "is_synthetic",
+      "type": "BOOL",
+      "mode": "REQUIRED"
+    }
+  ],
+  "rain_series": [
+    {
+      "name": "village_id",
+      "type": "INT64",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "date",
+      "type": "DATE",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "rain_mm",
+      "type": "FLOAT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "normal_mm",
+      "type": "FLOAT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "cum_deficit_pct",
+      "type": "FLOAT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "source",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    }
+  ],
+  "ndvi_series": [
+    {
+      "name": "plot_id",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "date",
+      "type": "DATE",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "ndvi",
+      "type": "FLOAT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "ndvi_normal",
+      "type": "FLOAT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "source",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    }
+  ],
+  "soil_moisture": [
+    {
+      "name": "village_id",
+      "type": "INT64",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "date",
+      "type": "DATE",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "sm_surface",
+      "type": "FLOAT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "sm_rootzone",
+      "type": "FLOAT64",
+      "mode": "NULLABLE"
+    }
+  ],
+  "soil_props": [
+    {
+      "name": "plot_id",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "texture_class",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "clay_pct",
+      "type": "FLOAT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "sand_pct",
+      "type": "FLOAT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "organic_carbon_pct",
+      "type": "FLOAT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "ph",
+      "type": "FLOAT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "water_fc_pct",
+      "type": "FLOAT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "depth_cm",
+      "type": "INT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "source",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "source_url",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "is_synthetic",
+      "type": "BOOL",
+      "mode": "REQUIRED"
+    }
+  ],
+  "crop_water_need": [
+    {
+      "name": "crop_key",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "crop",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "season",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "need_mm_low",
+      "type": "FLOAT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "need_mm_high",
+      "type": "FLOAT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "root_depth_m_low",
+      "type": "FLOAT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "root_depth_m_high",
+      "type": "FLOAT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "depletion_p",
+      "type": "FLOAT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "critical_stage",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "region",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "basis",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "is_synthetic",
+      "type": "BOOL",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "note",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "source_url",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "root_source_url",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    }
+  ],
+  "prices": [
+    {
+      "name": "commodity",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "district",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "market",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "date",
+      "type": "DATE",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "modal_price",
+      "type": "FLOAT64",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "reference_price",
+      "type": "FLOAT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "reference_type",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "reference_season",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "pct_vs_reference",
+      "type": "FLOAT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "source",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "source_url",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "is_synthetic",
+      "type": "BOOL",
+      "mode": "REQUIRED"
+    }
+  ],
+  "price_summary": [
+    {
+      "name": "commodity",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "district",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "latest_date",
+      "type": "DATE",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "latest_modal_price",
+      "type": "FLOAT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "reference_price",
+      "type": "FLOAT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "reference_type",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "reference_season",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "reference_source_url",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "pct_vs_reference",
+      "type": "FLOAT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "n_markets",
+      "type": "INT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "note",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "source",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "source_url",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "is_synthetic",
+      "type": "BOOL",
+      "mode": "REQUIRED"
+    }
+  ],
+  "livestock_prices": [
+    {
+      "name": "item_key",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "item",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "unit",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "region",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "period",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "value_low",
+      "type": "FLOAT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "value_high",
+      "type": "FLOAT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "value_mid",
+      "type": "FLOAT64",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "basis",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "is_synthetic",
+      "type": "BOOL",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "note",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "source_url",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    }
+  ],
+  "outcomes": [
+    {
+      "name": "outcome_id",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "hh_id",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "season",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "decision",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "predicted_signal",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "predicted_confidence",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "actual_result",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "cattle_sold",
+      "type": "INT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "distress_sale",
+      "type": "BOOL",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "request_id",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "rain_deficit_bucket",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "crop_key",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "note",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "is_synthetic",
+      "type": "BOOL",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "provenance",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    }
+  ],
+  "season_rain": [
+    {
+      "name": "village_id",
+      "type": "INT64",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "season",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "rain_deficit_bucket",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "source",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "is_synthetic",
+      "type": "BOOL",
+      "mode": "REQUIRED"
+    }
+  ],
+  "crop_mix_keys": [
+    {
+      "name": "decision",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "crop_key",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    }
+  ],
+  "alerts": [
+    {
+      "name": "alert_id",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "plot_id",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "stress_level",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "next_step",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "text_mr",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "created_at",
+      "type": "TIMESTAMP",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "via",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "hh_id",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "text_hi",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "fact_ids",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "data_as_of",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "request_id",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "message_id",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    }
+  ],
+  "feedback": [
+    {
+      "name": "feedback_id",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "request_id",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "feature",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "context_bucket",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "rating",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "note",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "created_at",
+      "type": "TIMESTAMP",
+      "mode": "REQUIRED"
+    }
+  ],
+  "term_review": [
+    {
+      "name": "review_id",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "term",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "meaning",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "category",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "canonical",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "status",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "request_id",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "created_at",
+      "type": "TIMESTAMP",
+      "mode": "REQUIRED"
+    }
+  ],
+  "impact_cache": [
+    {
+      "name": "cache_key",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "hh_id",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "feature",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "engine",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "model",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "snapshot_hash",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "version_hash",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "result_json",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "model_calls",
+      "type": "INT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "latency_ms",
+      "type": "INT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "created_at",
+      "type": "TIMESTAMP",
+      "mode": "REQUIRED"
+    }
+  ],
+  "impact_runs": [
+    {
+      "name": "run_id",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "created_at",
+      "type": "TIMESTAMP",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "population_snapshot_id",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "n_households",
+      "type": "INT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "kpis_json",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "assumptions_json",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "engine_requested",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "engines_used",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "data_backend",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "cache_snapshot_id",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "benchmark_run_id",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "version_metadata",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    }
+  ],
+  "verifier_benchmark": [
+    {
+      "name": "benchmark_run_id",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "case_id",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "created_at",
+      "type": "TIMESTAMP",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "case_type",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "expected",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "outcome",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "detail_json",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "latency_ms",
+      "type": "INT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "model_calls",
+      "type": "INT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "version_metadata",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    }
+  ],
+  "decision_log": [
+    {
+      "name": "request_id",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "hh_id",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "feature",
+      "type": "STRING",
+      "mode": "REQUIRED"
+    },
+    {
+      "name": "facts_used",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "output_json",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "verifier_status",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "orchestrator_used",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "fallback_reason",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "latency_ms",
+      "type": "INT64",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "genai_backend",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    },
+    {
+      "name": "gemini_model",
+      "type": "STRING",
+      "mode": "NULLABLE"
+    }
+  ]
+}

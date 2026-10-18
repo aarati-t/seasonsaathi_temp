@@ -1,0 +1,23 @@
+# Support pointers F4 may mention (SPEC F4 step 3). Only these ids; no other schemes or links.
+# Availability changes every season: always tell the farmer to confirm with the taluka / gram panchayat office.
+fodder_camp:
+  name_en: Government fodder camp (drought cattle camp)
+  name_mr: शासकीय चारा छावणी
+  name_hi: सरकारी चारा शिविर
+  what: In declared drought, the state has run cattle camps that feed large animals (2019 rate in livestock_prices.csv).
+  source_url: https://www.hindustantimes.com/pune-news/1-40-lakh-cattle-admitted-to-fodder-camps-to-survive-drought-in-pune-dist/story-0XMn8TXufqNEZcpKOjCLSI.html
+  confirm_with: taluka office / gram panchayat
+mgnrega:
+  name_en: MGNREGA wage work
+  name_mr: मनरेगा रोजगार
+  name_hi: मनरेगा रोज़गार
+  what: Wage work through the gram panchayat; timing it in the lean months can pay for fodder.
+  source_url: https://nrega.nic.in
+  confirm_with: gram panchayat (job card)
+silage:
+  name_en: Maize silage (own or bought)
+  name_mr: मका मुरघास
+  name_hi: मक्का साइलेज
+  what: Cheaper per kg than kadba this season; price only, not intake-equivalent to dry kadba.
+  source_url: https://pudhari.news/maharashtra/marathwada/dharashiv/fodder-price-hike-maharashtra-jowar-kadba-shortage-ab96
+  confirm_with: local dairy / KVK
